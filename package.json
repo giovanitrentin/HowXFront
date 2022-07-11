@@ -1,8 +1,8 @@
 {
   "name": "howfim",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "proxy": "https://howxfront.herokuapp.com/",
-  "private": true,
+  "private": false,
   "scripts": {
     "start": "vue-cli-service serve --open",
     "serve": "vue-cli-service serve --open",
@@ -13,6 +13,7 @@
     "@mdi/font": "^6.9.96",
     "@mdi/js": "^6.9.96",
     "@vue/cli": "^5.0.8",
+    "@vue/cli-service": "~5.0.0",    
     "@vue/cli-plugin-router": "~5.0.0",
     "@vue/cli-plugin-vuex": "~5.0.0",
     "axios": "^0.27.2",
