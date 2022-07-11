@@ -12,8 +12,8 @@
     <v-btn
       block
       elevation="2"
-      x-large
       @click="abreImovel"
+      x-large
     >Imóveis</v-btn>
 
     <v-divider class="mt-6">sfd</v-divider>
