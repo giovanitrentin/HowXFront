@@ -55,13 +55,13 @@
     data: () => ({ drawer: null,
     items: [
           { title: 'Home', icon: 'mdi-view-dashboard', to: '/' },
-          { title: 'Imovel', icon: 'mdi-help-box',  to: '/imovelmanutencao' },    
-          { title: 'Objeto', icon: 'mdi-help-box',  to: '/objetomanutencao' },
-          { title: 'Usuario', icon: 'mdi-help-box',  to: '/usuariomanutencao' },
+          { title: 'Imovel', icon: 'mdi-city',  to: '/imovelmanutencao' },    
+          { title: 'Objeto', icon: 'mdi-duck',  to: '/objetomanutencao' },
+          { title: 'Usuario', icon: 'mdi-account',  to: '/usuariomanutencao' },
 
-          { title: 'ImovelCadastro', icon: 'mdi-image',  to: '/imovelcadastro' },
-          { title: 'ObjetoCadastro', icon: 'mdi-image',  to: '/objetocadastro' },
-          { title: 'UsuarioCadastro', icon: 'mdi-image',  to: '/usuariocadastro' },
+     //     { title: 'ImovelCadastro', icon: 'mdi-image',  to: '/imovelcadastro' },
+     //     { title: 'ObjetoCadastro', icon: 'mdi-image',  to: '/objetocadastro' },
+     //     { title: 'UsuarioCadastro', icon: 'mdi-image',  to: '/usuariocadastro' },
 
         ],
     }),

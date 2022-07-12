@@ -29,7 +29,6 @@
     <v-divider class="mt-16">sfd</v-divider>
     <v-divider class="mt-16">sfd</v-divider>
 
-
     <v-btn
       block
       elevation="2"
