@@ -1,6 +1,8 @@
 <template>
   <v-container fluid class="pa-8">
-    Cadastro de Objeto
+    Cadastro de Objeto 
+
+
     <v-row align="center">
       <v-col cols="12">
         <v-select  
@@ -29,6 +31,7 @@
 
     objetos: [],
     SelectedObjeto: null,
+    usuarioLogado: {},
 
     data () {
       return {
@@ -38,8 +41,11 @@
     },
 
     mounted(){
+      if (!this.$store.logado){
+        this.$router.push({name: 'login'}); 
+      }
+
       Objeto.getAll().then(resposta => {
-        console.log(resposta.data)
         this.objetos = resposta.data
       })
     },

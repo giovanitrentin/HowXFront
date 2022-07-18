@@ -29,6 +29,7 @@
 
     imoveis: [],
     Selected: null,
+    usuarioLogado: {},
 
     data () {
       return {
@@ -38,6 +39,10 @@
     },
 
     mounted(){
+      if (!this.$store.logado){
+        this.$router.push({name: 'login'}); 
+      }
+      
       Imovel.getAll().then(resposta => {
         console.log(resposta.data)
         this.imoveis = resposta.data

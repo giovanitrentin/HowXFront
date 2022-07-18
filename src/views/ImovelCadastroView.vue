@@ -69,6 +69,8 @@
 
   export default {
 
+    usuarioLogado: {},
+
     data () {          
       return {
         imoveis: {}
@@ -76,11 +78,16 @@
     },
 
     mounted(){
-      var idImovel = this.$route.params.id;
+
+      if (!this.$store.logado){
+        this.$router.push({name: 'login'}); 
+      }
+
+      var idImovel = this.$route.params.id;       
       if (idImovel == 0){
           console.log(idImovel)
           this.imoveis = {}
-      }        
+      }
       else{
         console.log(idImovel)
         Imovel.get(idImovel).then(resposta => {

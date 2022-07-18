@@ -41,31 +41,42 @@
       block
       elevation="2"
       x-large
+      @click="sair"
     >Sair</v-btn>
 
     </v-col>
   </v-row>
 </template>
 
-
 <script>
-
   export default {
+
+    usuarioLogado: {},
 
     data () {
       return {
       }     
     },
 
+    mounted(){
+      if (!this.$store.logado){
+        this.$router.push({name: 'login'}); 
+      }
+    },
+
     methods:{
-      abreImovel(){        
+      abreImovel(){
         this.$router.push({name: 'imovelmanutencao'}); 
       },
-      abreObjeto(){        
+      abreObjeto(){
         this.$router.push({name: 'objetomanutencao'}); 
       },
-      abreUsuario(){        
+      abreUsuario(){
         this.$router.push({name: 'usuariomanutencao'}); 
+      },
+      sair(){
+        this.$store.logado = false;
+        this.$router.push({name: 'login'}); 
       }
     }
 

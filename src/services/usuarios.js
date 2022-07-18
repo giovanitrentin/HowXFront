@@ -19,5 +19,10 @@ export default {
         //console.log(data)
         //console.log('/usuario/' + id)
         return http.post('/usuario', data);
+    },
+    getLogin(login, senha) {
+        //console.log(id)
+        //console.log('/usuario/' + id)
+        return http.get('/usuario/?login=' + login + '&senha=' + senha)
     }
 }

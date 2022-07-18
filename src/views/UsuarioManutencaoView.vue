@@ -29,6 +29,7 @@
 
     usuarios: [],
     devSelected: null,
+    usuarioLogado: {},
 
     data () {
       return {
@@ -38,6 +39,10 @@
     },
 
     mounted(){
+      if (!this.$store.logado){
+        this.$router.push({name: 'login'}); 
+      }
+
       Usuario.getAll().then(resposta => {
         console.log(resposta.data)
         this.usuarios = resposta.data

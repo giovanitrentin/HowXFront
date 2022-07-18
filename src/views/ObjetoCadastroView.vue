@@ -78,6 +78,8 @@
 
   export default {
 
+    usuarioLogado: {},
+
     data () {          
       return {
         objetos: {},
@@ -86,6 +88,10 @@
     },
 
     mounted(){
+      if (!this.$store.logado){
+        this.$router.push({name: 'login'}); 
+      }
+
       var idObjeto = this.$route.params.id;
       if (idObjeto == 0){
           console.log(idObjeto)

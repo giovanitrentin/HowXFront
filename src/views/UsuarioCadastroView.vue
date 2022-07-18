@@ -77,6 +77,8 @@
 
   export default {
 
+    usuarioLogado: {},
+
     data () {          
       return {
         usuarios: {}
@@ -84,6 +86,10 @@
     },
 
     mounted(){
+      if (!this.$store.logado){
+        this.$router.push({name: 'login'}); 
+      }
+
       var idUsuario = this.$route.params.id;
       if (idUsuario == 0){
           console.log(idUsuario)
