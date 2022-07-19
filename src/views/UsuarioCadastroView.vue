@@ -108,15 +108,18 @@
       submit(){
         if (this.$route.params.id == 0) {
           Usuario.create(this.usuarios)
-          this.$router.push({name: 'usuariomanutencao'}); 
+          setTimeout(() => {            
+            this.$router.push({name: 'usuariomanutencao'}); }, 500);
         }        
         else {
           Usuario.update(this.$route.params.id, this.usuarios)
-          this.$router.push({name: 'usuariomanutencao'}); 
+          setTimeout(() => {            
+            this.$router.push({name: 'usuariomanutencao'}); }, 500);
         } 
       },
       volta(){
-        this.$router.push({name: 'usuariomanutencao'}); 
+          setTimeout(() => {            
+            this.$router.push({name: 'usuariomanutencao'}); }, 500);
       }
     }
 

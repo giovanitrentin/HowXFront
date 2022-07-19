@@ -10,7 +10,8 @@
           :items="imoveis"
           prepend-icon="mdi-pencil"
           @click:prepend="cadastroImovel(Selected)"
-          append-outer-icon="mdi-plus"
+          append-outer-icon="mdi-plus"     
+          @onclick="reload"   
           @click:append-outer="cadastroImovel(0)"          
           single-line
           label="Selecione o imóvel ou clique no + para cadastrar"
@@ -31,14 +32,14 @@
     Selected: null,
     usuarioLogado: {},
 
-    data () {
+    data() {
       return {
         imoveis: [],
         Selected: null,
       }     
     },
 
-    mounted(){
+    mounted() {
       if (!this.$store.logado){
         this.$router.push({name: 'login'}); 
       }
@@ -47,12 +48,21 @@
         console.log(resposta.data)
         this.imoveis = resposta.data
       })
+
     },
 
     methods:{
       cadastroImovel(item){
         if (item != null)
           this.$router.push({name: 'imovelCadastro', params: {id: item}}); 
+      },
+      reload(){
+        console.log('reload')
+
+        Imovel.getAll().then(resposta => {
+          console.log(resposta.data)
+          this.imoveis = resposta.data
+        })
       }
     }
 

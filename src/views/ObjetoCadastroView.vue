@@ -114,15 +114,18 @@
       submit(){
         if (this.$route.params.id == 0) {
           Objeto.create(this.objetos)
-          this.$router.push({name: 'objetomanutencao'}); 
+          setTimeout(() => {            
+            this.$router.push({name: 'objetomanutencao'}); }, 1000);
         }        
         else {
           Objeto.update(this.$route.params.id, this.objetos)
-          this.$router.push({name: 'objetomanutencao'}); 
+          setTimeout(() => {            
+            this.$router.push({name: 'objetomanutencao'}); }, 1000);
         } 
       },
       volta(){
-        this.$router.push({name: 'objetomanutencao'}); 
+          setTimeout(() => {            
+            this.$router.push({name: 'objetomanutencao'}); }, 1000);
       }
     }
 

@@ -98,7 +98,6 @@
               if (this.usuarioLogado.id > 0){
                 console.log('Passa home');
                 this.$router.push({name: 'home', params: {usuarioLogado: this.usuarioLogado}}); 
-               // this.$router.push({name: 'usuariomanutencao'}); 
 
               }
             }

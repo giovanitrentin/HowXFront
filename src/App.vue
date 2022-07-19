@@ -58,12 +58,6 @@
           { title: 'Imovel', icon: 'mdi-city',  to: '/imovelmanutencao' },    
           { title: 'Objeto', icon: 'mdi-duck',  to: '/objetomanutencao' },
           { title: 'Usuario', icon: 'mdi-account',  to: '/usuariomanutencao' },
-      //    { title: 'Login', icon: 'mdi-account',  to: '/login' },
-
-     //     { title: 'ImovelCadastro', icon: 'mdi-image',  to: '/imovelcadastro' },
-     //     { title: 'ObjetoCadastro', icon: 'mdi-image',  to: '/objetocadastro' },
-     //     { title: 'UsuarioCadastro', icon: 'mdi-image',  to: '/usuariocadastro' },
-
         ],
     }),
   }

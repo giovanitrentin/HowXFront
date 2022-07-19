@@ -88,7 +88,8 @@
           console.log(idImovel)
           this.imoveis = {}
       }
-      else{
+      else
+      {
         console.log(idImovel)
         Imovel.get(idImovel).then(resposta => {
           console.log(resposta.data)
@@ -101,15 +102,19 @@
       submit(){
         if (this.$route.params.id == 0) {
           Imovel.create(this.imoveis)
-          this.$router.push({name: 'imovelmanutencao'}); 
+          setTimeout(() => {            
+            this.$router.push({name: 'imovelmanutencao'}); }, 500);
         }        
-        else {
+        else 
+        {
           Imovel.update(this.$route.params.id, this.imoveis)
-          this.$router.push({name: 'imovelmanutencao'}); 
+          setTimeout(() => {            
+            this.$router.push({name: 'imovelmanutencao'}); }, 500);
         } 
       },
       volta(){
-        this.$router.push({name: 'imovelmanutencao'}); 
+          setTimeout(() => {            
+            this.$router.push({name: 'imovelmanutencao'}); }, 500);
       }
     }
 
